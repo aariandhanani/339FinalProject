@@ -1,0 +1,563 @@
+@keyframes cardAnimation {
+    0% {border-color: red;}
+    15% {border-color: orange;}
+    30% {border-color: yellow;}
+    45% {border-color: green;}
+    60% {border-color: yellow;}
+    75% {border-color: orange;}
+    90% {border-color: orangered;}
+    100% {border-color: red;}
+  }
+
+html{
+    scroll-behavior: smooth;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 400px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.pets-page {
+    
+    background-color: white;
+
+    .night-mode {
+        margin-top: 10px;
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+      
+    .night-mode input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+      
+    .switch {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ffee00;
+    }
+    
+    .switch:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+    }
+    
+    input:checked + .switch {
+        background-color: #2d1f5b;
+    }
+    
+    input:focus + .switch {
+        box-shadow: 0 0 1px #2d1f5b;
+    }
+    
+    input:checked + .switch:before {
+        transform: translateX(26px);
+    }
+    background-color: white;
+}
+
+.content-header {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,102,255,1) 50%, rgba(255,255,255,1) 100%);
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    p {
+        padding-top: 40px;
+        font-size: 20px;
+    }
+}
+
+.content-header-r {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 50%, rgba(255,255,255,1) 100%);
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    p {
+        padding-top: 40px;
+        font-size: 20px;
+    }
+}
+
+.content-header-p {
+    background: rgb(255,255,255);
+    background: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(124,255,122,1) 50%, rgba(255,255,255,1) 100%);
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    p {
+        padding-top: 40px;
+        font-size: 20px;
+    }
+}
+
+.content-header-i {
+    justify-content: center;
+    align-items: center;
+    /* height: 100px; */
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    padding-top: 50px;
+    h1 {
+        font-size: 30px;
+    }
+    p {
+        padding-top: 40px;
+        font-size: 20px;
+    }
+}
+
+.index-class {
+    background: rgb(255,255,255);
+    background: linear-gradient(157deg, rgba(255,255,255,1) 0%, rgba(163,247,255,1) 30%, rgba(255,255,255,1) 58%, rgba(206,255,217,1) 69%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* width: 100%;
+    height: 100%; */
+    min-height: 100%;
+}
+
+.title{
+    width: auto;
+    /* text-align: center; */
+
+    h1 {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        /* text-align: center; */
+    }
+}
+
+.subheading {
+    width: auto;
+
+    p {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        /* text-align: center; */
+    }
+}
+
+.card {
+    /* padding-top: 20px; */
+
+    background: rgb(255,255,255);
+    background: linear-gradient(164deg, rgba(255,255,255,1) 0%, rgba(146,197,255,1) 100%);
+
+    border: 5px solid navy;
+    justify-items: center;
+    width: 100%;
+
+    padding-top: 20px;
+
+    h2 {
+        text-decoration: underline;
+        text-align: center;
+        font-weight: bold;
+        padding: 20px;
+        padding-top: 10px;
+    }
+    
+    h3 {
+        text-align: center;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .grid {
+        grid-template-columns: 5% 40% 10% 40% 5%;
+        justify-self: center;
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .images {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 5%;
+        img {
+            width: 100%;
+        }
+        video {
+            width: 100%;
+        }
+        padding: 20px;
+    }
+}
+
+.card-recipes {
+    /* padding-top: 20px; */
+
+    background: rgb(255,255,255);
+    background: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
+    padding-top: 20px;
+
+
+    border: 5px solid maroon;
+    justify-items: center;
+    width: 100%;
+
+    h2 {
+        text-decoration: underline;
+        text-align: center;
+        font-weight: bold;
+        padding: 20px;
+        padding-top: 10px;
+    }
+    
+    h3 {
+        text-align: center;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .grid {
+        grid-template-columns: 5% 40% 10% 40% 5%;
+        justify-self: center;
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .images {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 5%;
+        img {
+            width: 100%;
+        }
+        video {
+            width: 100%;
+        }
+        padding: 20px;
+    }
+}
+
+.card-pets {
+    /* padding-top: 20px; */
+
+    background: rgb(255,255,255);
+    background: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(3,255,0,1) 100%);
+    padding-top: 20px;
+
+    border: 5px solid forestgreen;
+    justify-items: center;
+    width: 100%;
+    h2 {
+        text-decoration: underline;
+        text-align: center;
+        font-weight: bold;
+        padding: 20px;
+        padding-top: 10px;
+    }
+    
+    h3 {
+        text-align: center;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    p {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .grid {
+        grid-template-columns: 5% 40% 10% 40% 5%;
+        justify-self: center;
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .images {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 5%;
+        img {
+            width: 100%;
+        }
+        video {
+            width: 100%;
+        }
+        padding: 20px;
+    }
+}
+
+.card-index {
+    /* padding-top: 20px; */
+
+    background: rgb(163,181,255);
+    background: linear-gradient(157deg, rgba(163,181,255,1) 30%, rgba(211,206,255,1) 69%);
+
+    border: 5px solid black;
+    justify-items: center;
+    width: 100%;
+
+    h2 {
+        text-decoration: underline;
+        text-align: center;
+        font-weight: bold;
+        padding: 20px;
+        padding-top: 10px;
+    }
+    
+    h3 {
+        text-align: center;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    p {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .grid {
+        grid-template-columns: 5% 40% 10% 40% 5%;
+        justify-self: center;
+
+        h3 {
+            text-align: center;
+        }
+    }
+}
+
+.cards-grid {
+    padding-top: 0px;
+    display: grid;
+    grid-template-columns: 80%;
+    column-gap: 5%;
+    width: auto;
+    justify-content: center;
+}
+
+.current-page {
+    font-weight: bold;
+    color: red;
+    text-decoration: underline;
+}
+
+.other-page {
+    color: black;
+    text-decoration: none;
+}
+
+.other-page:hover {
+    color: red;
+}
+
+.other-page:focus {
+    color: red;
+}
+
+.skip a {
+    position: absolute;
+    top: -60px;
+}
+
+.skip a:focus {
+    position: absolute;
+    top: 20px;
+}
+
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+
+.nav-style {
+    font-family: Arial, Helvetica, sans-serif;
+    /* display: grid; */
+    /* justify-content: center; */
+    /* min-height: 100px; */
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    padding: 20px;
+    margin: 20px;
+    font-size: 25px;
+    /* grid-template-columns: auto auto auto auto; */
+    /* justify-content: space-evenly; */
+    border: 5px solid navy;
+    background-color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    /* min-height: 100px; */
+    font-size: 20px;
+    font-weight: bold;
+    width: auto;
+    background: rgb(255,255,255);
+    background: linear-gradient(157deg, rgba(255,255,255,1) 0%, rgba(163,247,255,1) 30%, rgba(255,255,255,1) 58%, rgba(206,255,217,1) 69%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 550px) {
+    .cards-grid {
+        display: grid;
+        grid-template-columns: 40% 40%;
+    }
+
+    .skip a {
+        font-size: 30px;
+    }
+
+    .cards-grid {
+        row-gap: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .card-pets {
+        .images {
+            grid-template-columns: auto;
+        }
+        padding-top: 20px;
+    }
+
+    .card-recipes {
+        .images {
+            grid-template-columns: auto;
+        }
+        padding-top: 20px;
+    }
+
+    .card {
+        .images {
+            grid-template-columns: auto;
+        }
+        padding-top: 20px;
+    }
+
+    footer {
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 850px) {
+    /* .rectangle {
+        position: fixed;
+        top: 0;
+        height: 20px;
+        width: 100%;
+        background-color: black;
+    } */
+
+    .cards-grid {
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+    }
+    
+    .card-pets {
+        padding-top: 0px;
+    }
+
+    .card-pets:hover {
+        animation-name: cardAnimation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    
+    .card-recipes {
+        padding-top: 0px;
+    }
+
+    .card-recipes:hover {
+        animation-name: cardAnimation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    
+    .card {
+        padding-top: 0px;
+    }
+
+    .card:hover {
+        animation-name: cardAnimation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    
+    .cards-grid {
+        padding-top: 20px;
+    }
+}
+
+/* @media (prefers-reduced-motion) {
+    #logo {
+        animation: none;
+    }
+} */
